@@ -1,0 +1,62 @@
+@import url('/css/estilo.css');
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 28px auto;
+  padding: 24px;
+  background: var(--linen);
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--copper);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--copper-dark);
+}
+
+.btn.secondary {
+  background: #e8e4d8;
+  color: var(--olive);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.panel {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 12px auto;
+    padding: 18px;
+  }
+}

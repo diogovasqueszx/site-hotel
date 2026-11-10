@@ -1,0 +1,22 @@
+<%-include('../cabecalho.ejs')%>
+    <main>
+        <h1>Editar hóspede</h1>
+        <a class="text-link" href="/hospede/lst">Voltar à lista</a>
+        <form class="form-panel" method="post">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" name="nome" value="<%=Hospede.nome%>" required>
+            <label for="codigoQuarto">Código do quarto</label>
+            <input id="codigoQuarto" type="text" name="codigoQuarto" value="<%=Hospede.codigoQuarto%>" required>
+            <label for="tipoQuarto">Quarto</label>
+            <select id="tipoQuarto" name="tipoQuarto" required>
+                <option <%=Hospede.tipoQuarto==='Quarto Luxo' ? 'selected' : '' %>>Quarto Luxo</option>
+                <option <%=Hospede.tipoQuarto==='Quarto Slim' ? 'selected' : '' %>>Quarto Slim</option>
+                <option <%=Hospede.tipoQuarto==='Suíte Presidencial' ? 'selected' : '' %>>Suíte Presidencial</option>
+                <option <%=Hospede.tipoQuarto==='Quarto duplo' ? 'selected' : '' %>>Quarto duplo</option>
+                <option <%=Hospede.tipoQuarto==='Quarto Base' ? 'selected' : '' %>>Quarto Base</option>
+            </select>
+            <button class="btn" type="submit">Salvar alterações</button>
+        </form>
+    </main>
+
+    <%-include('../rodape.ejs')%>

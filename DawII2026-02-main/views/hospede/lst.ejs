@@ -1,0 +1,43 @@
+<%-include('../cabecalho.ejs')%>
+    <main>
+        <h1>Hóspedes</h1>
+        <div class="toolbar">
+            <form class="search-form" action="/hospede/lst" method="post">
+                <label class="visually-hidden" for="filtro">Pesquisar hóspedes</label>
+                <input type="search" name="filtro" id="filtro" placeholder="Nome do hóspede">
+                <button class="btn secondary" type="submit">Pesquisar</button>
+            </form>
+            <a class="btn" href="/hospede/add">Cadastrar hóspede</a>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Código do quarto</th>
+                        <th>Quarto</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const hospede of Hospedes) { %>
+                        <tr>
+                            <td>
+                                <%= hospede.nome %>
+                            </td>
+                            <td>
+                                <%= hospede.codigoQuarto %>
+                            </td>
+                            <td>
+                                <%= hospede.tipoQuarto %>
+                            </td>
+                            <td class="actions"><a href="/hospede/edt/<%= hospede.id %>">Editar</a><a
+                                    href="/hospede/del/<%= hospede.id %>"
+                                    onclick="return confirm('Excluir este hóspede?')">Excluir</a></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <%-include('../rodape.ejs')%>

@@ -1,0 +1,22 @@
+<%-include('../cabecalho.ejs')%>
+    <main>
+        <h1>Editar quarto</h1>
+        <a class="text-link" href="/quarto/lst">Voltar à lista</a>
+        <form class="form-panel" method="post">
+            <label for="nome">Tipo de quarto</label>
+            <input id="nome" type="text" name="nome" value="<%=Quarto.nome%>" required>
+            <label for="codigo">Código do quarto</label>
+            <input id="codigo" type="text" name="codigo" value="<%=Quarto.codigo%>" required>
+            <label for="andar">Andar</label>
+            <input id="andar" type="number" name="andar" min="0" value="<%=Quarto.andar ?? ''%>">
+            <label for="bloco">Bloco</label>
+            <input id="bloco" type="text" name="bloco" value="<%=Quarto.bloco%>">
+            <label for="disponivel">Disponibilidade</label>
+            <select id="disponivel" name="disponivel">
+                <option value="true" <%=Quarto.disponivel ? 'selected' : '' %>>Disponível</option>
+                <option value="false" <%=Quarto.disponivel ? '' : 'selected' %>>Ocupado</option>
+            </select>
+            <button class="btn" type="submit">Salvar alterações</button>
+        </form>
+    </main>
+    <%-include('../rodape.ejs')%>

@@ -1,0 +1,23 @@
+<%-include('../cabecalho.ejs')%>
+    <main>
+        <h1>Cadastrar hóspede</h1>
+        <a class="text-link" href="/hospede/lst">Voltar à lista</a>
+        <form class="form-panel" method="post" action="/hospede/add">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" name="nome" required>
+            <label for="codigoQuarto">Código do quarto</label>
+            <input id="codigoQuarto" type="text" name="codigoQuarto" required>
+            <label for="tipoQuarto">Quarto</label>
+            <select id="tipoQuarto" name="tipoQuarto" required>
+                <option value="">Selecione um quarto</option>
+                <option>Quarto Luxo</option>
+                <option>Quarto Slim</option>
+                <option>Suíte Presidencial</option>
+                <option>Quarto duplo</option>
+                <option>Quarto Base</option>
+            </select>
+            <button class="btn" type="submit">Cadastrar hóspede</button>
+        </form>
+    </main>
+
+    <%-include('../rodape.ejs')%>
