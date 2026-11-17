@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#20352d">
+    <title>Hotel Royal | Uma estadia para lembrar</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+
+<body class="hotel-home">
+    <div class="hotel-topbar">
+        <div class="wrap hotel-topbar-inner">
+            <span>HOSPITALIDADE COM ELEGÂNCIA E CUIDADO</span>
+            <span class="hotel-topbar-note">HOTEL BOUTIQUE</span>
+        </div>
+    </div>
+    <header class="hotel-header">
+        <div class="hotel-nav wrap">
+            <a class="hotel-brand" href="/site/" aria-label="Hotel Royal - início">
+                <span class="hotel-brand-mark" aria-hidden="true">R</span>
+                <span><strong>HOTEL ROYAL</strong><small>BOUTIQUE HOTEL</small></span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <a class="active" href="/site/">Início</a>
+                <a href="#acomodacoes">Acomodações</a>
+                <a href="#reservar">Disponibilidade</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="hotel-nav-actions">
+                <a class="hotel-reservation-link" href="/site/login">Minha reserva</a>
+                <a class="hotel-nav-cta" href="#reservar">Reservar <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hotel-hero" aria-labelledby="hero-title">
+            <div class="hotel-hero-image" aria-hidden="true"></div>
+            <div class="hotel-hero-content wrap">
+                <p class="eyebrow">Bem-vindo ao Hotel Royal</p>
+                <h1 id="hero-title">O luxo de se<br>sentir <em>em casa.</em></h1>
+                <p class="hotel-hero-copy">Uma experiência boutique feita de silêncio, beleza natural e um cuidado que antecipa cada detalhe.</p>
+                <div class="hotel-hero-actions">
+                    <a class="button-copper" href="#reservar">Fazer uma reserva <span aria-hidden="true">→</span></a>
+                    <a class="button-light" href="#acomodacoes">Conhecer acomodações</a>
+                </div>
+            </div>
+            <form class="hotel-booking wrap" id="reservar" action="/quartos/index.html" method="get" aria-label="Buscar quartos">
+                <label class="booking-field">
+                    <span><span>Entrada</span><input type="date" name="entrada" aria-label="Data de entrada"></span>
+                </label>
+                <label class="booking-field">
+                    <span><span>Saída</span><input type="date" name="saida" aria-label="Data de saída"></span>
+                </label>
+                <label class="booking-field">
+                    <span><span>Hóspedes</span>
+                        <select name="hospedes" aria-label="Quantidade de hóspedes">
+                            <option value="1">1 hóspede</option>
+                            <option value="2" selected>2 hóspedes</option>
+                            <option value="3">3 hóspedes</option>
+                            <option value="4">4 hóspedes</option>
+                        </select>
+                    </span>
+                </label>
+                <button class="button-copper" type="submit">Buscar quartos</button>
+            </form>
+        </section>
+
+        <section class="hotel-rooms" id="acomodacoes" aria-labelledby="rooms-title">
+            <div class="wrap">
+                <div class="hotel-section-heading">
+                    <div>
+                        <p class="eyebrow">Encontre seu espaço</p>
+                        <h2 class="section-title" id="rooms-title">Nossas acomodações</h2>
+                    </div>
+                </div>
+                <div class="hotel-room-grid">
+                    <article class="hotel-room-card">
+                        <div class="hotel-room-photo hotel-room-one" role="img" aria-label="Quarto Luxo"></div>
+                        <div class="hotel-room-info">
+                            <span class="hotel-room-code">QUARTO 2026001</span>
+                            <h3>Quarto Luxo</h3>
+                            <p>Hóspede: Ana Oliveira</p>
+                            <a class="hotel-room-link" href="/quartos/quarto-luxo.html">Ver detalhes <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="hotel-room-card">
+                        <div class="hotel-room-photo hotel-room-two" role="img" aria-label="Quarto Slim"></div>
+                        <div class="hotel-room-info">
+                            <span class="hotel-room-code">QUARTO 2026002</span>
+                            <h3>Quarto Slim</h3>
+                            <p>Hóspede: Bruno Martins</p>
+                            <a class="hotel-room-link" href="/quartos/quarto-slim.html">Ver detalhes <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="hotel-room-card">
+                        <div class="hotel-room-photo hotel-room-three" role="img" aria-label="Suíte Presidencial"></div>
+                        <div class="hotel-room-info">
+                            <span class="hotel-room-code">QUARTO 2026003</span>
+                            <h3>Suíte Presidencial</h3>
+                            <p>Hóspede: Carla Souza</p>
+                            <a class="hotel-room-link" href="/quartos/suite-presidencial.html">Ver detalhes <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="hotel-room-card">
+                        <div class="hotel-room-photo hotel-room-four" role="img" aria-label="Quarto Duplo"></div>
+                        <div class="hotel-room-info">
+                            <span class="hotel-room-code">QUARTO 2026004</span>
+                            <h3>Quarto Duplo</h3>
+                            <p>Hóspede: Diego Ferreira</p>
+                            <a class="hotel-room-link" href="/quartos/quarto-duplo.html">Ver detalhes <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                    <article class="hotel-room-card">
+                        <div class="hotel-room-photo hotel-room-five" role="img" aria-label="Quarto Base"></div>
+                        <div class="hotel-room-info">
+                            <span class="hotel-room-code">QUARTO 2026005</span>
+                            <h3>Quarto Base</h3>
+                            <p>Hóspede: Elisa Costa</p>
+                            <a class="hotel-room-link" href="/quartos/quarto-base.html">Ver detalhes <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hotel-footer" id="contato">
+        <div class="wrap hotel-footer-inner">
+            <a class="hotel-brand" href="/site/">
+                <span class="hotel-brand-mark" aria-hidden="true">R</span>
+                <span><strong>HOTEL ROYAL</strong><small>BOUTIQUE HOTEL</small></span>
+            </a>
+            <p id="sobre">Um refúgio urbano onde o cuidado aparece nos detalhes.</p>
+            <a href="/site/login">Minha reserva <span aria-hidden="true">↗</span></a>
+        </div>
+    </footer>
+</body>
+
+</html>

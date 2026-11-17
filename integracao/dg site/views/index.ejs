@@ -1,0 +1,23 @@
+<%-include('cabecalho.ejs')%>
+    <main>
+        <h1>Hotel Royal</h1>
+        <p>Gerencie hóspedes e acompanhe os quartos do hotel.</p>
+        <div class="dashboard">
+            <section class="panel">
+                <h2>Hóspedes</h2>
+                <p>Consulte, cadastre e atualize os hóspedes.</p>
+                <a class="btn" href="/hospede/lst">Gerenciar hóspedes</a>
+            </section>
+            <section class="panel">
+                <h2>Quartos</h2>
+                <p>Cadastre quartos e acompanhe sua disponibilidade.</p>
+                <a class="btn" href="/quarto/lst">Gerenciar quartos</a>
+            </section>
+            <section class="panel">
+                <h2>Site do hotel</h2>
+                <p>Acesse a área pública do Hotel Royal.</p>
+                <a class="btn" href="/site/">Abrir site</a>
+            </section>
+        </div>
+    </main>
+    <%-include('rodape.ejs')%>

@@ -1,0 +1,47 @@
+<%-include('../cabecalho.ejs')%>
+    <main>
+        <h1>Quartos</h1>
+        <div class="toolbar">
+            <p>Consulte os quartos e sua disponibilidade.</p>
+            <a class="btn" href="/quarto/add">Cadastrar quarto</a>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quarto</th>
+                        <th>Código</th>
+                        <th>Andar</th>
+                        <th>Bloco</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const quarto of Quartos) { %>
+                        <tr>
+                            <td>
+                                <%= quarto.nome %>
+                            </td>
+                            <td>
+                                <%= quarto.codigo %>
+                            </td>
+                            <td>
+                                <%= quarto.andar ?? '—' %>
+                            </td>
+                            <td>
+                                <%= quarto.bloco || '—' %>
+                            </td>
+                            <td><span class="status <%= quarto.disponivel ? 'available' : 'occupied' %>">
+                                    <%= quarto.disponivel ? 'Disponível' : 'Ocupado' %>
+                                </span></td>
+                            <td class="actions"><a href="/quarto/edt/<%= quarto.id %>">Editar</a><a
+                                    href="/quarto/del/<%= quarto.id %>"
+                                    onclick="return confirm('Excluir este quarto?')">Excluir</a></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <%-include('../rodape.ejs')%>
